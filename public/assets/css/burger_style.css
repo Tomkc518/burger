@@ -1,0 +1,41 @@
+.burger-list {
+    font-size: 28px;
+}
+.headline-text {
+    font-size: 70px;
+    text-align: center;
+    color: white;
+}
+#burger-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.background-image {
+    /* background-image: url("https://www.dailydot.com/wp-content/uploads/ad8/d1/parma_parma_parma_chameleon.png"); */
+    background-image: url("https://vignette.wikia.nocookie.net/bobsburgerpedia/images/2/24/211_02_06_tk4-0162.jpg/revision/latest?cb=20121103005842");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.partition-background {
+    height: 300px;
+    overflow: auto;
+    border-radius: 5px;
+}
+.green-color {
+    background-color:rgb(133, 244, 65, .8)
+}
+.yellow-color {
+    background-color: rgb(244, 199, 65, .8);
+}
+.red-color {
+    background-color: rgb(244, 85, 65, .8);
+    height: 200px;
+    border-radius: 5px;
+}
+.brown-color {
+    background-color: rgb(107, 83, 80, .8);
+    border-radius: 5px;
+}

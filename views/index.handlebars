@@ -1,36 +1,52 @@
-<h1>Burgers!</h1>
+<div class='container'>
+  <div class="row">
+    <div class="col">
+      <div class="headline-text p-3 mb-4 brown-color">Eat Da Burger!</div>
 
-<h2>Burgers are Delicious!</h2>
 
-<ul id="fresh-burgers">
-  <h2>Ready to Eat!</h2>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <div>
-    <span class="label">{{this.id}}. {{this.burger_name}}</span>
-    <button data-id="{{this.id}}" data-newburger="true" class="devour">Devour It!</button>
+        {{!--
+        <img src="/assets/image/burger-image.jpeg" width="200px"> --}}
+      
+    </div>
   </div>
-  {{/unless}}
-  {{/each}}
-</ul>
+  <div class="row">
+    <div class="col-md-6">
+      <div id="fresh-burgers" class="partition-background yellow-color p-3">
+        <h2>Ready to Eat!</h2>
+        {{#each burgers}} {{#unless devoured}}
+        <div class="burger-list">
+          <span class="label burger-list">{{this.id}}. {{this.burger_name}}</span>
+          <button data-id="{{this.id}}" data-newburger="true" class="devour btn btn-danger">Devour It!</button>
+        </div>
+        {{/unless}} {{/each}}
+      </div>
+    </div>
 
-<ul id="devoured-column">
-  <h2>Devoured Burgers</h2>
-  {{#each burgers}}
-    {{#if devoured}}
-    <span class="label">{{this.id}}. {{this.burger_name}}</span>
-    {{/if}}
-  {{/each}}
-</ul>
 
-<h2>Add a burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+    <div class="col-md-6">
+      <div id="devoured-column" class="partition-background green-color p-3">
+        <h2>Devoured Burgers</h2>
+        {{#each burgers}} {{#if devoured}}
+        <div class="label burger-list">{{this.id}}. {{this.burger_name}}</div>
+        {{/if}} {{/each}}
+      </div>
+    </div>
   </div>
-  <button type="submit">Add Burger</button>
-</form>
 
+  <div class="row">
+    <div class="col-md-12">
+      <div class="partition-background red-color p-3 mt-3">
+        <h2>Add a burger</h2>
+        <form class="create-form">
 
+          <div class="form-group">
+            <label class="burger-list" for="burger">Burger Name:</label>
+            <input type="text" id="burger" name="name">
+          </div>
+          <button class="btn btn-success" type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
